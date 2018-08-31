@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  background-color: #DFE7EA;
+  font-family: Arial; }
+
+@media screen and (min-width: 589px) {
+  .mobile-content {
+    display: none; } }
+
+@media screen and (max-width: 589px) {
+  /*.desktop-content {display: none;}*/ }
+
+@media screen and (max-width: 910px) {
+  .options-sidebar {
+    display: none; } }
+
+@media screen and (min-width: 910px) {
+  .toggle-options-container {
+    display: none; }
+  .options-toggled {
+    display: none; } }
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 47px;
+  background-color: white;
+  border-bottom: 1px solid #DFE7EA;
+  min-width: 589px; }
+  .nav .nav-items-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px; }
+    .nav .nav-items-row .toggle-options-container {
+      cursor: pointer; }
+      .nav .nav-items-row .toggle-options-container .nav-drawer {
+        width: 22px;
+        height: 22px;
+        margin-left: 4px;
+        margin-right: 4px; }
+    .nav .nav-items-row .nav-img {
+      width: 36px;
+      height: 36px;
+      margin-left: 4px;
+      margin-right: 4px; }
+    .nav .nav-items-row .nav-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 4px;
+      margin-right: 4px; }
+
+.app-content {
+  display: flex;
+  flex-direction: row; }
+  .app-content .options-sidebar {
+    background-color: white;
+    width: 300px;
+    padding: 10px; }
+  .app-content .options-toggled {
+    background-color: white;
+    position: absolute;
+    width: 300px; }
+  .app-content .options-sidebar,
+  .app-content .options-toggled {
+    border-right: 1px solid #DFE7EA;
+    border-bottom: 1px solid #DFE7EA;
+    padding: 8px; }
+    .app-content .options-sidebar .form-title,
+    .app-content .options-toggled .form-title {
+      padding: 2px; }
+    .app-content .options-sidebar .form-group,
+    .app-content .options-sidebar .form-btn-container,
+    .app-content .options-toggled .form-group,
+    .app-content .options-toggled .form-btn-container {
+      padding: 2px;
+      display: flex;
+      flex-direction: column; }
+    .app-content .options-sidebar .remove-photo-btn,
+    .app-content .options-toggled .remove-photo-btn {
+      margin-top: 5px; }
+    .app-content .options-sidebar .form-title,
+    .app-content .options-toggled .form-title {
+      font-size: 15px;
+      font-weight: bold; }
+    .app-content .options-sidebar .form-group-row,
+    .app-content .options-toggled .form-group-row {
+      padding: 2px;
+      display: flex;
+      flex-direction: row; }
+    .app-content .options-sidebar label,
+    .app-content .options-toggled label {
+      padding: 2px;
+      font-size: 15px; }
+    .app-content .options-sidebar .text-input,
+    .app-content .options-sidebar .text-text-input,
+    .app-content .options-toggled .text-input,
+    .app-content .options-toggled .text-text-input {
+      border: 1px solid #A1A7AB;
+      border-radius: 3px;
+      padding: 2px;
+      font-family: Helvetica; }
+    .app-content .options-sidebar .text-text-input,
+    .app-content .options-toggled .text-text-input {
+      min-width: 286px;
+      max-width: 286px; }
+    .app-content .options-sidebar .form-btn,
+    .app-content .options-toggled .form-btn {
+      background-color: black;
+      border: 1px solid black;
+      border-radius: 3px;
+      color: white;
+      padding: 4px;
+      cursor: pointer; }
+  .app-content .content-container {
+    width: 100%; }
+    .app-content .content-container .desktop-content {
+      width: 100%;
+      background-color: #DFE7EA; }
+      .app-content .content-container .desktop-content .tweet-column {
+        background-color: white;
+        width: 589px;
+        height: calc(100vh - 48px);
+        margin: auto; }
+        .app-content .content-container .desktop-content .tweet-column .tweet-top-margin {
+          height: 40px; }
+        .app-content .content-container .desktop-content .tweet-column .tweet {
+          background-color: white;
+          padding: 6px;
+          border-top: 1px solid #DFE7EA;
+          border-bottom: 1px solid #DFE7EA; }
+          .app-content .content-container .desktop-content .tweet-column .tweet .user-photo {
+            width: 48px;
+            height: 48px;
+            border-radius: 100px;
+            padding: 6px;
+            margin-right: 5px; }
+          .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content {
+            width: 502px; }
+            .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 1px; }
+              .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data {
+                display: flex;
+                flex-direction: row;
+                align-items: center; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data .display-name {
+                  font-weight: bold;
+                  font-size: 14px;
+                  margin-right: 1px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data .verified-img {
+                  width: 15px;
+                  margin-top: 1px;
+                  margin-left: 1px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data .username {
+                  color: #657786;
+                  font-size: 14px;
+                  margin-left: 3px; }
+                  .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data .username .display-at-symbol {
+                    display: inline-block;
+                    position: relative;
+                    top: -2px;
+                    font-size: 12px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data .bullet-point {
+                  color: #657786;
+                  font-size: 9px;
+                  padding: 4px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-row-user-data .date-and-time {
+                  color: #657786;
+                  font-size: 14px; }
+              .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .top-row .top-arrow-container {
+                position: relative;
+                top: 3px;
+                left: 5px; }
+            .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .text {
+              display: block;
+              word-wrap: break-word;
+              margin-bottom: 8px;
+              font-size: 14px;
+              line-height: 1.5; }
+            .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row {
+              display: flex;
+              flex-direction: row;
+              margin-left: 3px; }
+              .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row .bottom-row-group {
+                display: flex;
+                flex-direction: row; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row .bottom-row-group .comments-img {
+                  width: 17px;
+                  margin-top: 1px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row .bottom-row-group .retweets-img {
+                  width: 20px;
+                  margin-top: 2px;
+                  margin-left: 25px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row .bottom-row-group .heart-img {
+                  margin-top: 2px;
+                  width: 19px;
+                  margin-left: 25px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row .bottom-row-group .mail-img {
+                  margin-left: 25px;
+                  width: 20px;
+                  position: relative;
+                  top: 2px; }
+                .app-content .content-container .desktop-content .tweet-column .tweet .non-img-content .bottom-row .bottom-row-group .bottom-row-text {
+                  color: #657786;
+                  font-weight: bold;
+                  font-size: 12px;
+                  margin-top: 4px;
+                  margin-left: 10px; }
+    .app-content .content-container .mobile-content {
+      width: 100%;
+      background-color: yellow; }

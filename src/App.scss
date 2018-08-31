@@ -1,0 +1,252 @@
+$break-xs: 300px;
+$break-mobile-desktop: 589px;
+$break-displayed-sidebar: 910px;
+$main-grey: #DFE7EA;
+$dark-grey: #A1A7AB;
+$grey-font: #657786;
+
+body {
+  margin: 0;
+  background-color: $main-grey;
+  font-family: Arial;
+}
+
+@media screen and (min-width: $break-mobile-desktop) {
+  .mobile-content {display: none;}
+}
+@media screen and (max-width: $break-mobile-desktop) {
+  /*.desktop-content {display: none;}*/
+}
+@media screen and (max-width: $break-displayed-sidebar) {
+  .options-sidebar {display: none;}
+}
+@media screen and (min-width: $break-displayed-sidebar) {
+  .toggle-options-container {display: none;}
+  .options-toggled {display: none;}
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 47px;
+  background-color: white;
+  border-bottom: 1px solid $main-grey;
+  min-width: $break-mobile-desktop;
+  .nav-items-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    .toggle-options-container {
+      cursor: pointer;
+      .nav-drawer {
+        width: 22px;
+        height: 22px;
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+    }
+    .nav-img {
+      width: 36px;
+      height: 36px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+    .nav-title  {
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  }
+}
+.app-content {
+  display: flex;
+  flex-direction: row;
+  .options-sidebar {
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+  }
+  .options-toggled {
+    background-color: white;
+    position: absolute;
+    width: 300px;
+  }
+  .options-sidebar,
+  .options-toggled {
+    border-right: 1px solid $main-grey;
+    border-bottom: 1px solid $main-grey;
+    padding: 8px;
+    .form-title {
+      padding: 2px;
+    }
+    .form-group,
+    .form-btn-container {
+      padding: 2px;
+      display: flex;
+      flex-direction: column;
+    }
+    .remove-photo-btn {
+      margin-top: 5px;
+    }
+    .form-title {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .form-group-row {
+      padding: 2px;
+      display: flex;
+      flex-direction: row;
+    }
+    label {
+      padding: 2px;
+      font-size: 15px;
+    }
+    .text-input,
+    .text-text-input {
+      border: 1px solid $dark-grey;
+      border-radius: 3px;
+      padding: 2px;
+      font-family: Helvetica;
+    }
+    .text-text-input {
+      min-width: 286px;
+      max-width: 286px;
+    }
+    .form-btn {
+      background-color: black;
+      border: 1px solid black;
+      border-radius: 3px;
+      color: white;
+      padding: 4px;
+      cursor: pointer;
+    }
+  }
+  .content-container {
+    width: 100%;
+    .desktop-content {
+      width: 100%;
+      background-color: $main-grey;
+      .tweet-column {
+        background-color: white;
+        width: 589px;
+        height: calc(100vh - 48px);
+        margin: auto;
+        .tweet-top-margin {
+          height: 40px;
+        }
+        .tweet {
+          background-color: white;
+          padding: 6px;
+          border-top: 1px solid $main-grey;
+          border-bottom: 1px solid $main-grey;
+          .user-photo {
+            width: 48px;
+            height: 48px;
+            border-radius: 100px;
+            padding: 6px;
+            margin-right: 5px;
+          }
+          .non-img-content {
+            width: 502px;
+            .top-row {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 1px;
+              .top-row-user-data {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .display-name {
+                  font-weight: bold;
+                  font-size: 14px;
+                  margin-right: 1px;
+                }
+                .verified-img {
+                  width: 15px;
+                  margin-top: 1px;
+                  margin-left: 1px;
+                }
+                .username {
+                  color: $grey-font;
+                  font-size: 14px;
+                  margin-left: 3px;
+                  .display-at-symbol {
+                    display: inline-block;
+                    position: relative;
+                    top: -2px;
+                    font-size: 12px;
+                  }
+                }
+                .bullet-point {
+                  color: $grey-font;
+                  font-size: 9px;
+                  padding: 4px;
+                }
+                .date-and-time {
+                  color: $grey-font;
+                  font-size: 14px;
+                }
+              }
+              .top-arrow-container {
+                position: relative;
+                top: 3px;
+                left: 5px;
+              }
+            }
+            .text {
+              display: block;
+              word-wrap: break-word;
+              margin-bottom: 8px;
+              font-size: 14px;
+              line-height: 1.5;
+            }
+            .bottom-row {
+              display: flex;
+              flex-direction: row;
+              margin-left: 3px;
+              .bottom-row-group {
+                display: flex;
+                flex-direction: row;
+                .comments-img {
+                  width: 17px;
+                  margin-top: 1px;
+                }
+                .retweets-img {
+                  width: 20px;
+                  margin-top: 2px;
+                  margin-left: 25px;
+                }
+                .heart-img {
+                  margin-top: 2px;
+                  width: 19px;
+                  margin-left: 25px;
+                }
+                .mail-img {
+                  margin-left: 25px;
+                  width: 20px;
+                  position: relative;
+                  top: 2px;
+                }
+                .bottom-row-text {
+                  color: $grey-font;
+                  font-weight: bold;
+                  font-size: 12px;
+                  margin-top: 4px;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile-content {
+      width: 100%;
+      background-color: yellow;
+    }
+  }
+}
